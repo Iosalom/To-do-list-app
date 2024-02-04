@@ -76,7 +76,7 @@ body {
 .main--ul {
   margin: auto auto;
   /* border: 5px solid #1a4d79; */
-  padding: 40px 10px 10px;
+  padding: 20px 10px 10px;
 }
 .li {
   /* border: 1px solid red; */
@@ -85,6 +85,7 @@ body {
   gap: 20px;
   border-bottom: 3px solid rgb(128, 108, 0);
   line-break: anywhere;
+  transition: 0.3s ease-out;
 }
 .li:nth-child(n + 2) {
   margin-top: 20px;
@@ -95,6 +96,7 @@ body {
   /* border: 3px solid red; */
   padding-bottom: 30px;
   color: rgb(255, 235, 128);
+  transition: 0.3s ease-out;
 }
 .add-btn-styles {
   background: rgb(0, 132, 214);
@@ -169,6 +171,7 @@ body {
   /* width: 100px; */
   border: none;
   border-radius: 5px;
+  transition: 0.3s ease-out;
 }
 
 /* This code, if 'DELETE' button is clicked, will 'delete' generated li  */
@@ -209,7 +212,7 @@ body {
     width: 20px;
   }
   .li {
-    width: 360px;
+    width: 270px;
   }
   .li .btn-delete,
   .li .btn-done {
@@ -217,6 +220,6 @@ body {
   }
   .li-div {
     /* border: 3px solid blue; */
-    width: 260px;
+    width: 170px;
   }
 }
