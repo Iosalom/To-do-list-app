@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  height: 100vh;
+  background: rgb(51, 49, 49);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.field-and-main-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.field-section {
+  width: 600px;
+  height: 70px;
+  /* border: 1px solid seagreen; */
+}
+.field-h2 {
+  width: 500px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  color: white;
+  /* border: 2px solid red; */
+  justify-content: space-between;
+  text-align: start;
+  font-size: 26px;
+}
+
+.field-section {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.field-section input {
+  width: 300px;
+  height: 26px;
+  padding: 0 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: 2px solid rgb(93, 93, 93);
+  background: rgb(51, 49, 49);
+  color: #eee;
+  transition: 0.3s ease-out;
+}
+.field-section input:hover {
+  outline: 2px solid rgb(133, 128, 113);
+  transition: 0.3s ease-in-out;
+}
+.field-section input:focus {
+  outline: 2px solid rgb(214, 200, 0);
+  transition: 0.3s ease-in;
+}
+
+.field-section .add-btn-styles,
+.field-section .remove-all-btn-styles {
+  width: 100px;
+  height: 26px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.main--ul {
+  margin: auto auto;
+  /* border: 5px solid #1a4d79; */
+  padding: 40px 10px 10px;
+}
+.li {
+  /* border: 1px solid red; */
+  width: 500px;
+  display: flex !important;
+  gap: 20px;
+  border-bottom: 3px solid rgb(128, 108, 0);
+  line-break: anywhere;
+}
+.li:nth-child(n + 2) {
+  margin-top: 20px;
+}
+.li-div {
+  width: 400px;
+  min-height: 50px;
+  /* border: 3px solid red; */
+  padding-bottom: 30px;
+  color: rgb(255, 235, 128);
+}
+.add-btn-styles {
+  background: rgb(0, 132, 214);
+  color: #eee;
+  font-weight: 600;
+  transition: 0.3s ease-out;
+}
+.add-btn-styles:hover {
+  background: rgba(0, 132, 214, 0.8);
+  transition: 0.3s ease-in;
+}
+.add-btn-styles:active {
+  background: rgba(0, 132, 214, 0.64);
+  transition: 0.3s ease-in;
+}
+.remove-all-btn-styles {
+  background: rgb(224, 41, 0);
+  color: #eee;
+  font-weight: 600;
+  transition: 0.3s ease-out;
+}
+.remove-all-btn-styles:hover {
+  background: rgba(224, 41, 0, 0.8);
+  transition: 0.3s ease-in;
+}
+.remove-all-btn-styles:active {
+  background: rgba(224, 41, 0, 0.64);
+  transition: 0.3s ease-in;
+}
+.btn-delete::before {
+  font: var(--fa-font-solid);
+  content: '\f2ed';
+}
+.btn-done::before {
+  font: var(--fa-font-solid);
+  content: '\f00c';
+}
+.btn-done:nth-child(n + 1) {
+  background: rgb(91, 255, 99);
+  height: 40px;
+  width: 100px;
+  transition: 0.3s ease-out;
+}
+.btn-done:nth-child(n + 1):hover {
+  background: rgba(91, 255, 99, 0.8);
+  transition: 0.3s ease-in;
+}
+.btn-done:nth-child(n + 1):active {
+  background: rgba(91, 255, 99, 0.64);
+  transition: 0.3 ease-in;
+}
+
+.btn-delete:nth-child(n + 1) {
+  background: rgb(255, 89, 89);
+  height: 40px;
+  width: 100px;
+  transition: 0.3s ease-out;
+}
+.btn-delete:nth-child(n + 1):hover {
+  background: rgb(255, 57, 57, 0.8);
+  transition: 0.3s ease-in;
+}
+.btn-delete:nth-child(n + 1):active {
+  background: rgb(255, 57, 57, 0.64);
+  transition: 0.3s ease-in;
+}
+.btn-delete,
+.btn-done {
+  word-break: keep-all;
+  cursor: pointer;
+  font-size: larger;
+  /* width: 100px; */
+  border: none;
+  border-radius: 5px;
+}
+
+/* This code, if 'DELETE' button is clicked, will 'delete' generated li  */
+.hidden-all-li {
+  display: none;
+}
+.cross-all-li {
+  text-decoration: line-through;
+  color: rgba(189, 175, 96, 0.6);
+  /* border: 3px solid red; */
+  width: 400px;
+  transition: 0.3s ease-in-out;
+}
+/* ONLY UI LEFT TO DO :D */
+@media (max-width: 600px) {
+  .field-section .add-btn-styles,
+  .field-section .remove-all-btn-styles {
+    width: 80px;
+  }
+  .field-section input {
+    width: 200px;
+  }
+  .add-btn-styles span,
+  .remove-all-btn-styles span {
+    display: none;
+  }
+  .add-btn-styles::after {
+    content: 'Add tsk.';
+  }
+  .remove-all-btn-styles::after {
+    content: 'Rem. all';
+  }
+  .field-h2 {
+    margin-left: 120px;
+  }
+  .btn-done,
+  .btn-delete {
+    width: 20px;
+  }
+  .li {
+    width: 360px;
+  }
+  .li .btn-delete,
+  .li .btn-done {
+    width: 60px;
+  }
+  .li-div {
+    /* border: 3px solid blue; */
+    width: 260px;
+  }
+}
