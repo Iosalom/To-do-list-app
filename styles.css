@@ -34,6 +34,7 @@ body {
   justify-content: space-between;
   text-align: start;
   font-size: 26px;
+  transition: 0.3s ease-out;
 }
 
 .field-section {
@@ -185,23 +186,23 @@ body {
 @media (max-width: 600px) {
   .field-section .add-btn-styles,
   .field-section .remove-all-btn-styles {
-    width: 80px;
+    width: 60px;
   }
   .field-section input {
-    width: 200px;
+    width: 150px;
   }
-  .add-btn-styles span,
+/*   .add-btn-styles span,
   .remove-all-btn-styles span {
     display: none;
   }
   .add-btn-styles::after {
-    content: 'Add tsk.';
+    content: 'Add';
   }
   .remove-all-btn-styles::after {
-    content: 'Rem. all';
-  }
+    content: 'Del all';
+  } */
   .field-h2 {
-    margin-left: 120px;
+    margin-left: 160px;
   }
   .btn-done,
   .btn-delete {
