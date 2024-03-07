@@ -188,6 +188,9 @@ body {
 }
 /* ONLY UI LEFT TO DO :D */
 @media (max-width: 600px) {
+  body {
+   overflow-x: hidden;
+  }
   .field-section .add-btn-styles,
   .field-section .remove-all-btn-styles {
     width: 60px;
